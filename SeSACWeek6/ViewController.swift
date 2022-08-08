@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     var blogList: [String] = []
     var cafeList: [String] = []
     
+    var isExpanded = false // false 2줄, true 0으로!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,12 +43,17 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func expandCell(_ sender: UIBarButtonItem) {
+        isExpanded = !isExpanded
+        tableView.reloadData()
+    }
+    
     func searchBlog() {
         KakaoAPIManager.shared.callRequest(type: .blog, query: "고래밥") { json in
             
             print(json)
             
-            for item in json["document"].arrayValue {
+            for item in json["documents"].arrayValue {
                 self.blogList.append(item["contents"].stringValue)
             }
             
@@ -58,7 +65,7 @@ class ViewController: UIViewController {
     func searchCafe() {
         KakaoAPIManager.shared.callRequest(type: .cafe, query: "고래밥") { json in
             print(json)
-            for item in json["document"].arrayValue {
+            for item in json["documents"].arrayValue {
                 let value = item["contents"].stringValue.replacingOccurrences(of: "<b>", with: "").replacingOccurrences(of: "</b>", with: "")
                 
                 self.cafeList.append(value)
@@ -86,7 +93,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "kakaoCell", for: indexPath) as? kakaoCell else { return UITableViewCell() }
         
         cell.testLabel.text = indexPath.section == 0 ? blogList[indexPath.row] : cafeList[indexPath.row]
-        cell.textLabel?.numberOfLines = 0
+        cell.testLabel?.numberOfLines = isExpanded ? 0 : 2
         
         return cell
     }

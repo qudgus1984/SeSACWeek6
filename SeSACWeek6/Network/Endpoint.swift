@@ -14,9 +14,9 @@ enum Endpoint {
     var requestURL: String {
         switch self {
         case .blog:
-            return URL.makeEndPointString("blog?.query=")
+            return URL.makeEndPointString("blog?query=")
         case.cafe:
-            return URL.makeEndPointString("cafe?.query=")
+            return URL.makeEndPointString("cafe?query=")
         }
     }
 }
