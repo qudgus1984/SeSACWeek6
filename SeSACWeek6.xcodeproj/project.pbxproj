@@ -23,6 +23,13 @@
 		2FACA0F728A0951D0066AF89 /* URL + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACA0F628A0951D0066AF89 /* URL + Extension.swift */; };
 		2FACA0F928A0A7900066AF89 /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACA0F828A0A7900066AF89 /* KakaoAPIManager.swift */; };
 		2FACA0FB28A0ABF90066AF89 /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACA0FA28A0ABF90066AF89 /* ClosureViewController.swift */; };
+		2FACE50928A1E037005C6788 /* SeSACButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACE50828A1E037005C6788 /* SeSACButton.swift */; };
+		2FACE50B28A1E603005C6788 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FACE50A28A1E603005C6788 /* CardView.xib */; };
+		2FACE50E28A1E63E005C6788 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACE50D28A1E63E005C6788 /* CardView.swift */; };
+		2FACE51128A1F37A005C6788 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACE50F28A1F37A005C6788 /* CardCollectionViewCell.swift */; };
+		2FACE51228A1F37A005C6788 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FACE51028A1F37A005C6788 /* CardCollectionViewCell.xib */; };
+		2FACE51428A1F638005C6788 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACE51328A1F638005C6788 /* MainViewController.swift */; };
+		2FACE51628A1FC2B005C6788 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACE51528A1FC2B005C6788 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		2FACA0F628A0951D0066AF89 /* URL + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL + Extension.swift"; sourceTree = "<group>"; };
 		2FACA0F828A0A7900066AF89 /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
 		2FACA0FA28A0ABF90066AF89 /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
+		2FACE50828A1E037005C6788 /* SeSACButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACButton.swift; sourceTree = "<group>"; };
+		2FACE50A28A1E603005C6788 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		2FACE50D28A1E63E005C6788 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2FACE50F28A1F37A005C6788 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardCollectionViewCell.swift; path = SeSACWeek6/CardCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		2FACE51028A1F37A005C6788 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CardCollectionViewCell.xib; path = SeSACWeek6/CardCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		2FACE51328A1F638005C6788 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2FACE51528A1FC2B005C6788 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTableViewCell.swift; path = SeSACWeek6/MainTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +91,13 @@
 		2FACA0CE28A08FE60066AF89 /* SeSACWeek6 */ = {
 			isa = PBXGroup;
 			children = (
+				2FACE50C28A1E60D005C6788 /* View */,
 				2FACA0F328A0948A0066AF89 /* Network */,
 				2FACA0CF28A08FE60066AF89 /* AppDelegate.swift */,
 				2FACA0D128A08FE60066AF89 /* SceneDelegate.swift */,
 				2FACA0D328A08FE60066AF89 /* ViewController.swift */,
 				2FACA0D528A08FE60066AF89 /* Main.storyboard */,
+				2FACE51328A1F638005C6788 /* MainViewController.swift */,
 				2FACA0FA28A0ABF90066AF89 /* ClosureViewController.swift */,
 				2FACA0D828A08FE60066AF89 /* Assets.xcassets */,
 				2FACA0DA28A08FE60066AF89 /* LaunchScreen.storyboard */,
@@ -99,6 +115,19 @@
 				2FACA0F828A0A7900066AF89 /* KakaoAPIManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		2FACE50C28A1E60D005C6788 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2FACE51528A1FC2B005C6788 /* MainTableViewCell.swift */,
+				2FACE50F28A1F37A005C6788 /* CardCollectionViewCell.swift */,
+				2FACE51028A1F37A005C6788 /* CardCollectionViewCell.xib */,
+				2FACE50828A1E037005C6788 /* SeSACButton.swift */,
+				2FACE50A28A1E603005C6788 /* CardView.xib */,
+				2FACE50D28A1E63E005C6788 /* CardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +202,9 @@
 			files = (
 				2FACA0F028A090CF0066AF89 /* .gitignore in Resources */,
 				2FACA0DC28A08FE60066AF89 /* LaunchScreen.storyboard in Resources */,
+				2FACE50B28A1E603005C6788 /* CardView.xib in Resources */,
 				2FACA0D928A08FE60066AF89 /* Assets.xcassets in Resources */,
+				2FACE51228A1F37A005C6788 /* CardCollectionViewCell.xib in Resources */,
 				2FACA0D728A08FE60066AF89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,11 +216,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FACE51628A1FC2B005C6788 /* MainTableViewCell.swift in Sources */,
 				2FACA0D428A08FE60066AF89 /* ViewController.swift in Sources */,
 				2FACA0D028A08FE60066AF89 /* AppDelegate.swift in Sources */,
 				2FACA0FB28A0ABF90066AF89 /* ClosureViewController.swift in Sources */,
+				2FACE51428A1F638005C6788 /* MainViewController.swift in Sources */,
+				2FACE51128A1F37A005C6788 /* CardCollectionViewCell.swift in Sources */,
 				2FACA0F228A091140066AF89 /* APIKey.swift in Sources */,
+				2FACE50E28A1E63E005C6788 /* CardView.swift in Sources */,
 				2FACA0D228A08FE60066AF89 /* SceneDelegate.swift in Sources */,
+				2FACE50928A1E037005C6788 /* SeSACButton.swift in Sources */,
 				2FACA0F928A0A7900066AF89 /* KakaoAPIManager.swift in Sources */,
 				2FACA0F528A0949B0066AF89 /* Endpoint.swift in Sources */,
 				2FACA0F728A0951D0066AF89 /* URL + Extension.swift in Sources */,

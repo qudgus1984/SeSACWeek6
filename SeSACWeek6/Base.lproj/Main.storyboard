@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SG1-TT-hui">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X2J-7U-tch">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -86,43 +87,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J60-CT-cbK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J60-CT-cbK" customClass="SeSACButton" customModule="SeSACWeek6" customModuleProvider="target">
                                 <rect key="frame" x="50" y="64" width="314" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="qRA-0f-9t4"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.56141594839999998" green="0.61796001639999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="colorPickerButtonClicked:" destination="fnC-2K-o2E" eventType="touchUpInside" id="oEI-gc-ooE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GF-Am-m2z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GF-Am-m2z" customClass="SeSACButton" customModule="SeSACWeek6" customModuleProvider="target">
                                 <rect key="frame" x="50" y="224" width="314" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="51O-OM-gbh"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.61647790670000002" green="0.56140817350000005" blue="0.42081736120000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KER-BY-kwN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KER-BY-kwN" customClass="SeSACButton" customModule="SeSACWeek6" customModuleProvider="target">
                                 <rect key="frame" x="50" y="144" width="314" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="JYQ-id-zX3"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.56141594839999998" green="0.61796001639999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="backgroundColorChanged:" destination="fnC-2K-o2E" eventType="touchUpInside" id="yH9-T6-93R"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-eu-QPF" customClass="CardView" customModule="SeSACWeek6" customModuleProvider="target">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ILV-ea-9Pi"/>
+                                    <constraint firstAttribute="width" constant="100" id="trQ-di-Qt6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dg3-Dj-O6k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="N2h-eu-QPF" firstAttribute="centerY" secondItem="CP2-br-QcO" secondAttribute="centerY" id="0xK-P9-ZJy"/>
                             <constraint firstItem="dg3-Dj-O6k" firstAttribute="trailing" secondItem="KER-BY-kwN" secondAttribute="trailing" constant="50" id="AVp-Xn-aGm"/>
                             <constraint firstItem="3GF-Am-m2z" firstAttribute="top" secondItem="KER-BY-kwN" secondAttribute="bottom" constant="20" id="Aj7-f5-ntb"/>
                             <constraint firstItem="dg3-Dj-O6k" firstAttribute="trailing" secondItem="J60-CT-cbK" secondAttribute="trailing" constant="50" id="Eny-9u-Z5r"/>
+                            <constraint firstItem="N2h-eu-QPF" firstAttribute="centerX" secondItem="CP2-br-QcO" secondAttribute="centerX" id="GRC-ro-6I3"/>
                             <constraint firstItem="KER-BY-kwN" firstAttribute="top" secondItem="J60-CT-cbK" secondAttribute="bottom" constant="20" id="Nsg-iE-yv5"/>
                             <constraint firstItem="dg3-Dj-O6k" firstAttribute="trailing" secondItem="3GF-Am-m2z" secondAttribute="trailing" constant="50" id="Uhu-UD-HJ5"/>
                             <constraint firstItem="J60-CT-cbK" firstAttribute="leading" secondItem="dg3-Dj-O6k" secondAttribute="leading" constant="50" id="kSP-Bg-1K2"/>
@@ -131,10 +175,122 @@
                             <constraint firstItem="KER-BY-kwN" firstAttribute="leading" secondItem="dg3-Dj-O6k" secondAttribute="leading" constant="50" id="uGO-HX-tgK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardView" destination="N2h-eu-QPF" id="DAP-MB-xio"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cr6-7P-rr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1802.8985507246377" y="43.526785714285715"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Vgj-XP-DJx">
+            <objects>
+                <viewController id="X2J-7U-tch" customClass="MainViewController" customModule="SeSACWeek6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="roJ-O6-pSO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MCH-HA-kb7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="179"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1wP-gF-gb8">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CYJ-3c-gpU">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mkd-Rx-0a7">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-0A-3UX">
+                                <rect key="frame" x="0.0" y="223" width="414" height="639"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="260" id="tLS-Xw-Fb5" customClass="MainTableViewCell" customModule="SeSACWeek6" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="260"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tLS-Xw-Fb5" id="pN3-5V-XtN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-5I-yGg">
+                                                    <rect key="frame" x="16" y="16" width="382" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="9qa-N9-0Al"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rm8-Td-ARN">
+                                                    <rect key="frame" x="0.0" y="52" width="414" height="200"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m2y-FY-4wn">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M8L-6M-yrp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hto-C1-LKG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </collectionViewCellContentView>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rm8-Td-ARN" secondAttribute="trailing" id="9C6-b6-tsd"/>
+                                                <constraint firstAttribute="trailing" secondItem="BXl-5I-yGg" secondAttribute="trailing" constant="16" id="Fdv-MH-MPc"/>
+                                                <constraint firstItem="BXl-5I-yGg" firstAttribute="leading" secondItem="pN3-5V-XtN" secondAttribute="leading" constant="16" id="MQq-VV-Kk2"/>
+                                                <constraint firstAttribute="bottom" secondItem="rm8-Td-ARN" secondAttribute="bottom" constant="8" id="WVE-jV-r7h"/>
+                                                <constraint firstItem="rm8-Td-ARN" firstAttribute="top" secondItem="BXl-5I-yGg" secondAttribute="bottom" constant="8" id="a4O-Rh-HCW"/>
+                                                <constraint firstItem="rm8-Td-ARN" firstAttribute="leading" secondItem="pN3-5V-XtN" secondAttribute="leading" id="kb8-uV-pYB"/>
+                                                <constraint firstItem="BXl-5I-yGg" firstAttribute="top" secondItem="pN3-5V-XtN" secondAttribute="top" constant="16" id="zJa-7g-eSq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentCollectionView" destination="rm8-Td-ARN" id="g4D-b3-FSa"/>
+                                            <outlet property="titleLabel" destination="BXl-5I-yGg" id="b5p-FZ-Wsa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oud-87-k1V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fNI-0A-3UX" firstAttribute="top" secondItem="MCH-HA-kb7" secondAttribute="bottom" id="De9-9z-8zC"/>
+                            <constraint firstItem="MCH-HA-kb7" firstAttribute="leading" secondItem="Oud-87-k1V" secondAttribute="leading" id="Ksb-t2-i4Z"/>
+                            <constraint firstItem="Oud-87-k1V" firstAttribute="trailing" secondItem="fNI-0A-3UX" secondAttribute="trailing" id="Pbs-5H-tlO"/>
+                            <constraint firstItem="MCH-HA-kb7" firstAttribute="top" secondItem="Oud-87-k1V" secondAttribute="top" id="V4M-3g-ucD"/>
+                            <constraint firstItem="MCH-HA-kb7" firstAttribute="height" secondItem="roJ-O6-pSO" secondAttribute="height" multiplier="0.2" id="XcZ-IU-heM"/>
+                            <constraint firstItem="Oud-87-k1V" firstAttribute="bottom" secondItem="fNI-0A-3UX" secondAttribute="bottom" id="Y18-04-KQO"/>
+                            <constraint firstItem="fNI-0A-3UX" firstAttribute="leading" secondItem="Oud-87-k1V" secondAttribute="leading" id="goB-DY-SU8"/>
+                            <constraint firstItem="MCH-HA-kb7" firstAttribute="trailing" secondItem="Oud-87-k1V" secondAttribute="trailing" id="v74-Ux-mSG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerCollectionView" destination="MCH-HA-kb7" id="y4m-5w-HHm"/>
+                        <outlet property="mainTableView" destination="fNI-0A-3UX" id="qrl-5w-mIP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lmn-cI-430" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662.3188405797105" y="55.580357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oHX-me-IhB">
@@ -155,6 +311,17 @@
             <point key="canvasLocation" x="124.6376811594203" y="43.526785714285715"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="3GF-Am-m2z">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+        <designable name="J60-CT-cbK">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+        <designable name="KER-BY-kwN">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

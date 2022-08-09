@@ -12,9 +12,17 @@ class ClosureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cardView.posterImageView.backgroundColor = .red
+        cardView.likeButton.backgroundColor = .yellow
+        cardView.likeButton.addTarget(self, action: #selector(likeButtonClicked), for: .touchUpInside)
+    }
+    
+    @objc func likeButtonClicked() {
+        print("버튼클릭")
     }
     
     
+    @IBOutlet weak var cardView: CardView!
     
     @IBAction func colorPickerButtonClicked(_ sender: UIButton) {
         showAlert(title: "컬러피커", message: "띄우시겠습니까?", okTitle: "띄우기") {
