@@ -16,6 +16,14 @@ class CardCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         setupUI()
+        
+        print("CardCollectionViewCell", #function)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        cardView.contentLabel.text = nil
     }
     
     func setupUI() {
